@@ -71,9 +71,30 @@ section {
 
   ul {
     text-align: center;
+    margin: auto;
+    max-width: 1300px;
 
     li {
       font-size: 70px;
+    }
+  }
+}
+
+// Tablette
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section {
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    ul {
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

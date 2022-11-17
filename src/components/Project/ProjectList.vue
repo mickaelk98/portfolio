@@ -13,8 +13,25 @@ import ProjectCard from './ProjectCard.vue';
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .project-list {
   margin: 0 auto;
+  max-width: 1300px;
+}
+
+// Tablette
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 </style>

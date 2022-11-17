@@ -14,7 +14,7 @@ import Project from './components/Project/Project.vue';
     <TechnoList />
     <Project />
     <Contact />
-    <TheFooter class="db6" />
+    <TheFooter />
   </div>
 </template>
 
@@ -22,13 +22,10 @@ import Project from './components/Project/Project.vue';
 @import './assets/base.scss';
 // @import './assets/debug.scss';
 
-
-// Mobile
-@media screen and (min-width: 767px) {}
-
-// Tablette
-@media screen and (min-width: 768px) and (max-width: 1023px) {}
-
-// Ordinateur
-@media screen and (min-width: 1024px) {}
+// .page-container {
+//   display: block;
+//   margin: auto;
+//   max-width: 1200px;
+//   padding: 0 1rem;
+// }
 </style>
