@@ -66,7 +66,7 @@ onMounted(() => {
 @import '../assets/base.scss';
 
 section {
-  background: url(../../public/images/bg.jpg) center/cover;
+  background: url(/public/images/bg.jpg) center/cover;
   height: calc(100vh - 80px);
   display: flex;
   align-items: center;

@@ -4,12 +4,15 @@
 
 <template>
   <article>
-    <img src="../../../public/images/unsplash-cart.jpg" alt="phot du projet">
-    <h3>Titre du projet</h3>
+    <img src="/images/booki.png" alt="phot du projet">
+    <h3>Booki</h3>
     <ul>
       <li>HTML</li>
       <li>CSS</li>
     </ul>
+    <p>
+      Intégration responsive d'une maquette de reservasion d'hotel
+    </p>
     <div class="buttons">
       <button class="btn">Voir le projet</button>
       <button class="btn">Voir le code</button>
@@ -20,11 +23,17 @@
 <style scoped lang="scss">
 article {
   width: 90%;
+  max-width: 400px;
   margin: 20px auto 30px;
 
   h3 {
     text-transform: uppercase;
     margin: 5px 0;
+  }
+
+  p {
+    color: var(--text-gray-color);
+    margin: 20px 0;
   }
 
   ul {
