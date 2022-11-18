@@ -59,7 +59,7 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     .container {
-      padding: 20px 0;
+      padding: 20px 10px;
     }
   }
 }

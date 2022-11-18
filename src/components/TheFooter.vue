@@ -63,6 +63,7 @@ footer {
     .container {
       display: flex;
       justify-content: space-between;
+      padding: 30px 10px;
 
       ul {
         width: 200px;

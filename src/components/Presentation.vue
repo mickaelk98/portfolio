@@ -1,27 +1,62 @@
 <script setup>
+import { onMounted } from 'vue';
+
+// attend que le composant apparaiet sur le DOM
+onMounted(() => {
+  const title = document.querySelector('.text h1');
+  const text = document.querySelector('.text p');
+
+  // animation du titre
+  new Typewriter(title, {
+    deleteSpeed: 20
+  })
+    .changeDelay(80)
+    .typeString('Salut, je suis <span style="color: #00a8ff">Mickael Keita</span> développeur web.')
+    .pauseFor(300)
+    .start()
+
+  // attend la fin de la première animation
+  setTimeout(() => {
+    // animation du text de presentation
+    new Typewriter(text, {
+      deleteSpeed: 50
+    })
+      .changeDelay(50)
+      .typeString("Ayant toujours été attiré par la programation et les nouvelles technologies, j'ai donc suivi une formation sur <span style='font-weight: bold; color: #fff'>OpenClassroom</span> afin d'acquérir de solides compétences. Sur ce site, vous verrez différents projets que j'ai réalisés sur des technologies telles que ")
+      .typeString("<span style='color: #dd4a24; font-weight: bold'>HTML</span>")
+      .pause(1000)
+      .deleteChars(4)
+      .changeDelay(100)
+      .typeString("<span style='color: #0169ba; font-weight: bold'>CSS</span>")
+      .pauseFor(700)
+      .deleteChars(3)
+      .typeString("<span style='color: #c66495; font-weight bold'>SASS</span>")
+      .pauseFor(700)
+      .deleteChars(4)
+      .typeString("<span style='color: #efd91c; font-weight: bold'>JAVASCRIPT</span> et <span style='color: #3fb27f; font-weight: bold'>VUEJS</span>")
+      .start()
+  }, 5000)
+})
+
 
 </script>
 
 <template>
   <section>
     <div class="container">
+
       <!-- Text de presentation -->
       <div class="text">
-        <h1>Salut moi c'est <span>Mickael Keita</span>, je suis developpeur web</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt at ex quaerat
-          reprehenderit assumenda, suscipit blanditiis quas architecto
-          modi!
-        </p>
-        <div class="buttons">
-          <button class="btn">Me contacter</button>
-          <button class="btn">Telecharger CV</button>
-        </div>
+        <h1></h1>
+        <p></p>
       </div>
 
-      <!-- image -->
-      <div class="profil-picture">
-        <img src="../../public/images/unsplash-profil-sans-bg.png" alt="profil">
+      <!-- Bouttons -->
+      <div class="buttons">
+        <a href="#contact">
+          <button class="btn">Me contacter</button>
+        </a>
+        <button class="btn">Telecharger CV</button>
       </div>
     </div>
   </section>
@@ -31,34 +66,30 @@
 @import '../assets/base.scss';
 
 section {
-  background: var(--primary-color);
+  background: url(../../public/images/bg.jpg) center/cover;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .container {
     text-align: center;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin: auto;
     max-width: 1300px;
 
-    .profil-picture {
-      background: var(--secondary-color);
-      margin: 0 auto;
-      max-width: 250px;
-      border-radius: 0 0 10px 10px;
-    }
-
     .text {
       h1 {
+        font-size: 30px;
         margin: 30px 0;
-
-        span {
-          text-decoration: underline var(--tertiary-color);
-        }
+        text-transform: none;
       }
 
       p {
         color: var(--text-gray-color);
         margin: 0 5px 50px;
+        font-size: 20px;
       }
     }
 
@@ -92,9 +123,9 @@ section {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   section {
     .container {
-      flex-direction: row;
-
       .text {
+        margin-bottom: 50px;
+
         h1 {
           font-size: 25px;
         }
@@ -110,14 +141,6 @@ section {
         justify-content: space-between;
         flex-direction: row;
       }
-
-      .profil-picture {
-        max-width: 500px;
-
-        img {
-          height: 100%;
-        }
-      }
     }
   }
 }
@@ -125,8 +148,16 @@ section {
 @media screen and (min-width: 1024px) {
   section {
     .container {
-      flex-direction: row;
-      text-align: left;
+      .text {
+        margin-left: 10px;
+      }
+
+      .buttons {
+        width: 50%;
+        margin: 10px auto 50px;
+        justify-content: space-between;
+        flex-direction: row;
+      }
     }
   }
 }

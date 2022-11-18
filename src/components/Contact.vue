@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <section>
+  <section id="contact">
     <div class="container">
       <div class="contact-text">
         <h2>contact</h2>
-        <p>N'hesiter pas a me contacter je vous repondrai le plus tot possible</p>
+        <p>N'hésitez pas à me contacter, je vous répondrai le plus tôt possible.</p>
       </div>
       <form action="#">
         <input type="text" placeholder="Nom">
@@ -104,7 +104,7 @@ section {
   section {
     .container {
       display: flex;
-      gap: 60px;
+      gap: 30px;
 
       padding: 30px 0;
 
@@ -113,7 +113,7 @@ section {
         flex-direction: column;
         gap: 20px;
         max-width: 700px;
-        margin: 0 auto;
+        margin: 0 10px;
       }
     }
   }

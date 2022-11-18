@@ -43,31 +43,7 @@
 section {
   position: relative;
   padding: 30px 0;
-  background: var(--primary-color);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 10px;
-    right: 10px;
-    height: 2px;
-    // width: 90%;
-    color: var(--text-gray-color);
-    background: var(--text-gray-color);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-    right: 10px;
-    height: 2px;
-    // width: 90%;
-    color: var(--text-gray-color);
-    background: var(--text-gray-color);
-  }
+  background: var(--secondary-color);
 
   ul {
     text-align: center;
