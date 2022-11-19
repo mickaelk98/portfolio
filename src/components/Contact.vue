@@ -9,10 +9,10 @@
         <h2>contact</h2>
         <p>N'hésitez pas à me contacter, je vous répondrai le plus tôt possible.</p>
       </div>
-      <form action="#">
-        <input type="text" placeholder="Nom">
-        <input type="text" placeholder="Email">
-        <textarea placeholder="Votre message"></textarea>
+      <form name="contact" method="post" netlify>
+        <input type="text" name="nom" placeholder="Nom">
+        <input type="text" name="email" placeholder="Email">
+        <textarea name="message" placeholder="Votre message"></textarea>
         <button class="btn">Envoyer</button>
       </form>
     </div>
@@ -40,6 +40,7 @@ section {
       p {
         color: var(--text-gray-color);
         font-size: 20px;
+        margin: 0 10px;
       }
     }
 

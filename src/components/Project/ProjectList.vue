@@ -5,11 +5,6 @@ import ProjectCard from './ProjectCard.vue';
 <template>
   <div class="project-list">
     <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
-    <ProjectCard />
   </div>
 </template>
 

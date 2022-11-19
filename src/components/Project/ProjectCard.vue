@@ -1,21 +1,26 @@
 <script setup>
-
+import data from '../../data/project'
 </script>
 
 <template>
-  <article>
-    <img src="/images/booki.png" alt="phot du projet">
-    <h3>Booki</h3>
+  <article v-for="project in data" :key="project.id">
+    <img :src="project.image" :alt="project.imageDescription">
+    <h3>{{ project.title }}</h3>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
+      <li v-for="technologie in project.technologies">{{ technologie }}</li>
     </ul>
-    <p>
-      Intégration responsive d'une maquette de reservasion d'hotel
-    </p>
+    <p>{{ project.description }}</p>
     <div class="buttons">
-      <button class="btn">Voir le projet</button>
-      <button class="btn">Voir le code</button>
+
+      <!-- lien vers le site du projet -->
+      <a :href="project.siteLink" target="_blank">
+        <button class="btn">Voir le projet</button>
+      </a>
+
+      <!-- lien vers le code du projet -->
+      <a :href="project.codeLink" target="_blank">
+        <button class="btn">Voir le code</button>
+      </a>
     </div>
   </article>
 </template>
@@ -39,7 +44,8 @@ article {
   ul {
     display: flex;
     gap: 10px;
-    color: var(--text-gray-color);
+    color: var(--tertiary-color);
+    text-transform: uppercase;
   }
 
   .buttons {

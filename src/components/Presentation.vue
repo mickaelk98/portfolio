@@ -98,6 +98,7 @@ section {
       margin: 10px auto 50px;
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 20px;
       justify-content: space-between;
 
