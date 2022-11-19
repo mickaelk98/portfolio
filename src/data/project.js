@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: "booki",
-    image: "/public/images/booki.png",
+    image: "/images/booki.png",
     imageDescription: "photo du projet",
     technologies: ["html", "css"],
     description: "Intégration responsive d'une maquette de reservasion d'hotel",
@@ -12,7 +12,7 @@ export default [
   {
     id: 2,
     title: "ohmyfood",
-    image: "/public/images/ohmyfood.png",
+    image: "/images/ohmyfood.png",
     imageDescription: "photo du projet",
     technologies: ["html", "sass"],
     description: "Intégration d'un site de restauration",
