@@ -3,6 +3,7 @@ import { useField, useForm } from 'vee-validate';
 import { z } from 'zod'
 import { toFormValidator } from '@vee-validate/zod'
 import emailjs from '@emailjs/browser';
+import EMAILJS_PUBLICKEY from '../data/emailjsKey';
 
 // verification des saisies de l'utilisateur
 const validationSchema = toFormValidator(
@@ -44,7 +45,7 @@ const sendMessage = handleSubmit(async (formValue, { resetForm }) => {
 
     const templateID = "template_s55k1eg"
     const serviceID = "service_nkh4tr2"
-    const publicKey = `${import.meta.env.VITE_EMAILJS_PUBLICKEY}`
+    const publicKey = `${EMAILJS_PUBLICKEY}`
 
     const result = await emailjs.send(serviceID, templateID, templateParams, publicKey);
 

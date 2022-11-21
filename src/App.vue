@@ -20,12 +20,4 @@ import Project from './components/Project/Project.vue';
 
 <style lang="scss">
 @import './assets/base.scss';
-// @import './assets/debug.scss';
-
-// .page-container {
-//   display: block;
-//   margin: auto;
-//   max-width: 1200px;
-//   padding: 0 1rem;
-// }
 </style>
