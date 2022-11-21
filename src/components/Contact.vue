@@ -9,15 +9,15 @@ import EMAILJS_PUBLICKEY from '../data/emailjsKey';
 const validationSchema = toFormValidator(
   z.object({
     name: z.string({ required_error: "Ce champ est obligatoire" })
-      .regex(new RegExp("^([a-z]+(( |')[a-z]+)*)+([-]([a-z]+(( |')[a-z]+)*)+)*$"), "Votre nom nest pas conforme")
+      .regex(new RegExp("^([a-z]+(( |')[a-z]+)*)+([-]([a-z]+(( |')[a-z]+)*)+)*$"), "Votre nom n'est pas conforme")
       .max(50, "votre nom doit faire moin de 50 caractères"),
     email: z.string({ required_error: "Ce champ est obligatoire" })
-      .email("Vous devez rentrez une adresse email"),
+      .email("Vous devez rentrer une adresse email"),
     subject: z.string({ required_error: "Ce champ est obligatoire" })
-      .min(1, "Ce champ ne peut pas etre vide")
+      .min(1, "Ce champ ne peut pas être vide")
       .max(100, "Votre sujet ne doit pas depasser 100 caractères"),
     message: z.string({ required_error: "Ce champ est obligatoire" })
-      .min(1, "Ce champ ne peut pas etre vide")
+      .min(1, "Ce champ ne peut pas être vide")
       .max(1000, "Votre message doit faire maximum de 1000 caractères"),
   })
 )
@@ -136,6 +136,10 @@ section {
       textarea {
         resize: none;
         height: 120px;
+      }
+
+      small {
+        color: var(--error);
       }
 
       .btn {
