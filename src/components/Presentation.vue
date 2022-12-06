@@ -56,7 +56,9 @@ onMounted(() => {
         <a href="#contact">
           <button class="btn">Me contacter</button>
         </a>
-        <button class="btn">Telecharger CV</button>
+        <a href="/images/cv.pdf" download>
+          <button class="btn">Telecharger CV</button>
+        </a>
       </div>
     </div>
   </section>
