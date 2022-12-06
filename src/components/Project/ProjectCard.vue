@@ -4,7 +4,9 @@ import data from '../../data/project'
 
 <template>
   <article v-for="project in data" :key="project.id">
-    <img :src="project.image" :alt="project.imageDescription">
+    <div class="image-container">
+      <img :src="project.image" :alt="project.imageDescription">
+    </div>
     <h3>{{ project.title }}</h3>
     <ul>
       <li v-for="technologie in project.technologies">{{ technologie }}</li>
@@ -31,6 +33,16 @@ article {
   max-width: 400px;
   margin: 20px auto 30px;
 
+  .image-container {
+    overflow: hidden;
+    max-height: 185px;
+
+    img {
+      transition: transform 0.6s;
+      width: 100%;
+    }
+  }
+
   h3 {
     text-transform: uppercase;
     margin: 5px 0;
@@ -43,6 +55,7 @@ article {
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     color: var(--tertiary-color);
     text-transform: uppercase;

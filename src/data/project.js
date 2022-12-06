@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     title: "booki",
-    image: "/images/booki.png",
+    image: "/images/booki-fullpage.png",
     imageDescription: "photo du projet",
     technologies: ["html", "css"],
     description: "Intégration responsive d'une maquette de reservasion d'hotel",
@@ -12,11 +12,21 @@ export default [
   {
     id: 2,
     title: "ohmyfood",
-    image: "/images/ohmyfood.png",
+    image: "/images/ohmyfood-fullpage.png",
     imageDescription: "photo du projet",
     technologies: ["html", "sass"],
     description: "Intégration d'un site de restauration",
     codeLink: "https://github.com/mickaelk98/MickaelKeita_3_17122021",
     siteLink: "https://mickaelk98.github.io/MickaelKeita_3_17122021/",
+  },
+  {
+    id: 3,
+    title: "groupomania",
+    image: "/images/groupomania-fullpage.png",
+    imageDescription: "photo du projet",
+    technologies: ["vuejs", "docker", "nodejs", "mongodb", "ngnix"],
+    description: "Réseau social pour une entreprise fictive",
+    codeLink: "https://github.com/mickaelk98/Groupomania",
+    siteLink: "https://groupomania.site/",
   },
 ];
